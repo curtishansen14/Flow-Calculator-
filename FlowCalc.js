@@ -6,15 +6,6 @@ const liters = 'liters';
 const minutes = 'minutes';
 const seconds = 'seconds';
 
-function validateInput(input){
-    
-    if (input > 10000 || input < 0){
-        document.getElementById("error").value = "Invalid Entry"
-    }
-    else{
-        document.getElementById('error').value = ''
-    }
-}
 
 
 function convert(){
@@ -23,9 +14,13 @@ function convert(){
     let output = document.getElementById('output').value;
     let outputUnits = document.getElementById('outputUnits').value;
     let result = input;
-    
-    if(validateInput(input)){
 
+    if (input > 10000 || input < 0){
+        document.getElementById("error").value = "Invalid Entry"
+    }
+    else{
+        document.getElementById('error').value = ''
+    }    
         switch(inputUnits){
             case 'liters/minute':
                 switch (outputUnits){
@@ -84,9 +79,8 @@ function convert(){
                     case 'gallons/minute':
                     break;
                 }
-    }
     
-    } else {result = ''}
+    } 
     document.getElementById('output').value = result;
 }
 
