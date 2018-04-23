@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FLOW BOT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="FlowCalc.css" />
+    <script src="FlowCalc.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Flow Calculator</h1>
+        <div class="containter">
+            <form>
+                <div class "row">
+                    <div class="col-md-6">
+                        <label>From</label>
+                        <input type="number" id='input' min="1" max="10000" placeholder=" Flow Rate ">
+                        <select name = 'inputUnits' id ='inputUnits'>
+                            <option value="gallons/minute">gallons/minute</option>
+                            <option value='liters/minute'>liters/minute</option>
+                            <option value="gallons/second">gallons/second</option>
+                            <option value='liters/minute'>liters/second</option>
+                        </select>
+                    </div>    
+                    </div>
+                    <div class="col-md-6">
+                        <label>To</label>
+                        <input type='number' id='output' disabled='true' placeholder=" Flow Rate ">
+                        <select name = 'outputUnits' id  = 'outputUnits'>
+                                <option value="gallons/minute">gallons/minute</option>
+                                <option value='liters/minute'>liters/minute</option>
+                                <option value="gallons/second">gallons/second</option>
+                                <option value='liters/minute'>liters/second</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" onclick="convert()">Calculate</button>
+                    <br>
+                    <br>
+                    <br>
+                    
+                </div>
+                <div class="col-md-12">
+                    <input class="errorField" id= 'error' disabled='true'>
+                </div>
+            </form>
+        </div>
+    </div>       
+</body>
+</html>
